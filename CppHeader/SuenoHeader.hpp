@@ -4,5 +4,6 @@
 #define SUENO_SUENOHEADER_HPP
 
 void stopWatch();
+void timer();
 
 #endif //SUENO_SUENOHEADER_HPP

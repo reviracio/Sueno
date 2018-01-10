@@ -23,10 +23,13 @@ void Search(int argc, char** argv){
         system("apt-get update");
     }else if(searchKey=="upgrade"){
         system("apt-get update && apt-get upgrade");
-    }else if(searchKey=="stopwatch"){
+    } else if(searchKey=="stopwatch"){
         stopWatch();
+    }else if(searchKey=="clion"){
+        system("/bin/bash -c /opt/Clion/bin/clion.sh &"); //po programie
+    }else if(searchKey=="javaHello"){
+        system("/home/reviracio/Code/CLionProjects/Sueno/BashScripts/JavaHelloWorld.sh");
     }
-
 }
 
 int main(int argc, char** argv) {
@@ -36,6 +39,7 @@ int main(int argc, char** argv) {
         Search(argc,argv);
     }else{
         cout << "Nice to meet you" << endl;
+        //GitTest
     }
 
     return 0;

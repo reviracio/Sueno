@@ -12,15 +12,16 @@ using std::endl;
 using std::string;
 using std::getline;
 
-
 void stopWatch(){
-    timeval t1, t2;
-    gettimeofday(&t1, NULL);
-    string line;
+    timeval startTime;
+    timeval stopTime;
+    gettimeofday(&startTime, NULL);
     cout << endl;
     cout << "Press a Enter to continue...";
+    string line;
     getline(cin,line);
-    gettimeofday(&t2, NULL);
-    int stopwatchTime = (t2.tv_sec - t1.tv_sec) * 1000 + (t2.tv_usec - t1.tv_usec)/1000;
-    cout << "Elapsed time: " << stopwatchTime/1000 << ":" << stopwatchTime%1000 << endl;
+    gettimeofday(&stopTime, NULL);
+    int elapsedTime;
+    elapsedTime = (stopTime.tv_sec - startTime.tv_sec) * 1000 + (stopTime.tv_usec - startTime.tv_usec)/1000;
+    cout << "Elapsed time: " << elapsedTime/1000 << ":" << elapsedTime%1000 << endl;
 }
